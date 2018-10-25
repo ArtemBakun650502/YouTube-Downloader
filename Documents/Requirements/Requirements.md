@@ -27,13 +27,13 @@ YouTubeDownloader - это приложение, позволяющее скач
 Приложение разрабатывается на языке Java для ОС Windows.
 
 ### 2.2 Интерфейс пользователя <a name="2.2"></a>
-Главный экран:
+- Главный экран:
 
 ![start](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/start.png)
-Экран скачивания:
+- Экран скачивания:
 
 ![download](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/download.png)
-Экран "Скачать позже":
+- Экран "Скачать позже":
 
 ![downloadLater](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/downloadLater.png)
 
