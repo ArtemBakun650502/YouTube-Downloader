@@ -30,6 +30,12 @@ YouTubeDownloader - это приложение, позволяющее скач
 Главный экран:
 ![start](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/start.png)
 
+Экран скачивания:
+![download](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/download.png)
+
+Экран "Скачать позже":
+![downloadLater](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Mockups/downloadLater.png)
+
 ### 2.3 Характеристики пользователя <a name="2.3"></a>
 Данное приложение представленно для студентов и работников технической и инженерной сфер.
 
