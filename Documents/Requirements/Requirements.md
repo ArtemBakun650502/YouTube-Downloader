@@ -60,4 +60,4 @@ YouTubeDownloader - это приложение, позволяющее скач
 
 ### 4. Аналоги <a name="4"></a>
 * YTD2 - это бесплатное  Java приложение для загрузки видео YouTube в формате FLV / MP4. (https://sourceforge.net/projects/ytd2/)
-* SaveFrom - это браузерное расширение, позволяющее скачивать видео с YouTube в разном качестве.
+* SaveFrom - это браузерное расширение, позволяющее скачивать видео с YouTube в разном качестве. (https://ru.savefrom.net/)
