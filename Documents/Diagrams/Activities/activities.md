@@ -5,7 +5,7 @@
  4. [Просмотр видео](#4) <br>
 
 ### 1. Добавление в список<a name="1"></a>
-![Добавление в список]()
+![Добавление в список](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Documents/Diagrams/Activities/ActivityAdd.PNG)
 
 ### 2. Удаление из списка<a name="2"></a>
 ![Удаление из списка]()
