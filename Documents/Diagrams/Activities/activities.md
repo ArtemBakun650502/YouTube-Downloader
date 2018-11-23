@@ -11,7 +11,7 @@
 ![Удаление из списка](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Documents/Diagrams/Activities/ActivityDelete.PNG)
   
 ### 3. Скачать видео<a name="3"></a>
-![Скачать видео]()
+![Скачать видео](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Documents/Diagrams/Activities/ActivityDownload.PNG)
 
 ### 4. Просмотр видео<a name="4"></a>
 ![Просмотр видео]()
