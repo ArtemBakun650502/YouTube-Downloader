@@ -14,4 +14,4 @@
 ![Скачать видео](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Documents/Diagrams/Activities/ActivityDownload.PNG)
 
 ### 4. Просмотр видео<a name="4"></a>
-![Просмотр видео]()
+![Просмотр видео](https://github.com/ArtemBakun650502/YouTube-Downloader/blob/master/Documents/Diagrams/Activities/ActivityView.PNG)
