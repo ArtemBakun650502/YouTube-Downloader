@@ -12,8 +12,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.apache.commons.io.FileUtils.write;
-
 public class AddController {
 
     @FXML private Button addButton;
@@ -27,16 +25,8 @@ public class AddController {
             public void handle(MouseEvent mouseEvent) {
                 if (textField.getText() != null) {
                     url = textField.getText();
-                    //onClickDownloadButton();
                     textField.clear();
-                    DownloadLaterController downloadLaterController = new DownloadLaterController();
-                    downloadLaterController.setUrl(url);
-                    File file = new File("D:\\University\\проект\\скачать позже\\скачать.txt\\");
-                    /*try {
-                        file.createNewFile();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }*/
+                    File file = new File("D:\\Университет\\проект\\скачать позже\\скачать.txt\\");
                     try {
                         update(file, url);
                     } catch (FileNotFoundException e) {

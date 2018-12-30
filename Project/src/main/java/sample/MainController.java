@@ -38,9 +38,7 @@ public class MainController {
         downloadButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                loadListVideo();
                 onClickDownloadButton();
-                //loadListVideo();
             }
         });
 
@@ -64,7 +62,7 @@ public class MainController {
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                fileName = new File("D:\\\\University\\\\проект\\\\видос\\\\" + newValue);
+                fileName = new File("D:\\\\Университет\\\\проект\\\\видос\\\\" + newValue);
             }
         });
 
@@ -80,7 +78,7 @@ public class MainController {
     public void loadListVideo() {
         List results = new ArrayList<String>();
 
-        File[] files = new File("D:\\\\University\\\\проект\\\\видос\\\\").listFiles();
+        File[] files = new File("D:\\\\Университет\\\\проект\\\\видос\\\\").listFiles();
 //If this pathname does not denote a directory, then listFiles() returns null.
 
         for (File file : files) {

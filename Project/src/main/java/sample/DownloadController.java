@@ -6,14 +6,12 @@ import com.github.axet.vget.info.VideoFileInfo;
 import com.github.axet.vget.info.VideoInfo;
 import com.github.axet.vget.vhs.VimeoInfo;
 import com.github.axet.vget.vhs.YouTubeInfo;
-import com.github.axet.vget.vhs.YouTubeQParser;
 import com.github.axet.wget.SpeedInfo;
 import com.github.axet.wget.info.DownloadInfo;
 import com.github.axet.wget.info.ex.DownloadInterruptedError;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -159,14 +157,18 @@ public class DownloadController {
     }
 
     private void onClickDownloadButton() {
+        downloadVideo(url);
+    }
+
+    public void downloadVideo(String fileName) {
         // ex: /Users/axet/Downloads/
 
-        File path = new File("D:\\University\\проект\\видос\\");
+        File path = new File("D:\\Университет\\проект\\видос\\");
 
         try {
             final AtomicBoolean stop = new AtomicBoolean(false);
 
-            URL web = new URL(url);
+            URL web = new URL(fileName);
 
             VGetParser user = null;
 

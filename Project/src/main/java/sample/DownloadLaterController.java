@@ -1,10 +1,5 @@
 package sample;
 
-import com.github.axet.vget.VGet;
-import com.github.axet.vget.info.VGetParser;
-import com.github.axet.vget.info.VideoFileInfo;
-import com.github.axet.vget.info.VideoInfo;
-import com.github.axet.wget.info.ex.DownloadInterruptedError;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -20,10 +15,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 
 public class DownloadLaterController {
@@ -34,8 +27,6 @@ public class DownloadLaterController {
     @FXML private Button deleteButton;
     @FXML private Button updateButton;
 
-    private String url;
-    //private File fileName;
     private static String fileName;
 
     @FXML
@@ -46,7 +37,6 @@ public class DownloadLaterController {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 onClickAddButton();
-                //loadListVideo();
             }
         });
 
@@ -54,7 +44,6 @@ public class DownloadLaterController {
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                //fileName = new File("D:\\\\University\\\\проект\\\\скачать позже\\\\" + newValue);
                 fileName = newValue;
             }
         });
@@ -62,7 +51,6 @@ public class DownloadLaterController {
         deleteButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                //fileName.delete();
 
                 try {
                     onClickDeleteButton();
@@ -84,7 +72,6 @@ public class DownloadLaterController {
         downloadButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                //loadListVideo();
                 onClickDownloadButton();
             }
         });
@@ -117,8 +104,7 @@ public class DownloadLaterController {
     private void onClickDeleteButton() throws IOException {
         List results;
         results = read();
-        final File file = new File("D:\\\\University\\\\проект\\\\скачать позже\\\\temp.txt");
-        //File tmp = File.createTempFile("D:\\\\University\\\\проект\\\\скачать позже\\\\tmp", "");
+        final File file = new File("D:\\\\Университет\\\\проект\\\\скачать позже\\\\temp.txt");
 
         PrintWriter writer = new PrintWriter(file.getAbsoluteFile());
         ObservableList<String> result = FXCollections.observableArrayList(results);
@@ -129,67 +115,22 @@ public class DownloadLaterController {
                 writer.write(res + "\n");
             }
         }
-        final File file1 = new File("D:\\\\University\\\\проект\\\\скачать позже\\\\скачать.txt");
 
-        /*if (file1.delete()) {
-            file.renameTo(file1);
+        if(file.renameTo(new File("буду.txt"))) {
+            System.out.println("Файл переименован");
+        } else {
+            System.out.println("Файл не переименован");
+        }
 
-        }*/
-        //if(file.exists() && !file1.exists()) {
-            if(file.renameTo(new File("буду.txt"))) {
-                System.out.println("Файл переименован");
-            } else {
-                System.out.println("Файл не переименован");
-            }
-        //}
         writer.close();
     }
 
     private void onClickDownloadButton() {
-        // ex: /Users/axet/Downloads/
 
-        File path = new File("D:\\University\\проект\\видос\\");
-
-        try {
-            final AtomicBoolean stop = new AtomicBoolean(false);
-
-            URL web = new URL(fileName);
-
-            VGetParser user = null;
-
-            // create proper html parser depends on url
-            user = VGet.parser(web);
-
-            VideoInfo videoinfo = user.info(web);
-
-            VGet v = new VGet(videoinfo, path);
-
-            DownloadController.VGetStatus notify = new DownloadController.VGetStatus(videoinfo);
-
-            v.extract(user, stop, notify);
-
-            System.out.println("Title: " + videoinfo.getTitle());
-            List<VideoFileInfo> list = videoinfo.getInfo();
-            if (list != null) {
-                for (VideoFileInfo d : list) {
-                    System.out.println("Download URL: " + d.getSource());
-                }
-            }
-
-            v.download(user, stop, notify);
-
-        } catch (DownloadInterruptedError e) {
-            throw e;
-        } catch (RuntimeException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        DownloadController downloadController = new DownloadController();
+        downloadController.downloadVideo(fileName);
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     public static List read() throws FileNotFoundException {
         //Этот спец. объект для построения строки
@@ -197,7 +138,7 @@ public class DownloadLaterController {
         ObservableList<String> result;
         List results = new ArrayList<String>();
 
-        File file = new File("D:\\University\\проект\\скачать позже\\скачать.txt\\");
+        File file = new File("D:\\Университет\\проект\\скачать позже\\скачать.txt\\");
         try {
             //Объект для чтения файла в буфер
             BufferedReader in = new BufferedReader(new FileReader( file.getAbsoluteFile()));
@@ -217,4 +158,5 @@ public class DownloadLaterController {
 
         return results;
     }
+
 }
