@@ -9,7 +9,7 @@
 Мёртвый код был обнаружен в классе AddController (Commit: https://github.com/ArtemBakun650502/YouTube-Downloader/commit/cce4f0f43af3e95b325c30279d4577ace61d33f0), с установкой нового URL. 
 Решение: удалить.
 
-Дублирование кода было обнаружено в классах DownloadController (Commit: https://github.com/ArtemBakun650502/YouTube-Downloader/commit/cce4f0f43af3e95b325c30279d4577ace61d33f0) и DownloadLaterController (Commit: https://github.com/ArtemBakun650502/YouTube-Downloader/commit/cce4f0f43af3e95b325c30279d4577ace61d33f0) в строках с 149 по 187, связанное с практически одинаковой реализацией скачивания.
+Дублирование кода было обнаружено в классах DownloadController (Commit: https://github.com/ArtemBakun650502/YouTube-Downloader/commit/cce4f0f43af3e95b325c30279d4577ace61d33f0) и DownloadLaterController (Commit: https://github.com/ArtemBakun650502/YouTube-Downloader/commit/cce4f0f43af3e95b325c30279d4577ace61d33f0) в строках с 149 по 187, связанное с практически одинаковой реализацией скачивания.</br>
 Решение: создание нового метода downloadVideo в классе DownloadController.
 
 Комментарии, оставленные после проверки работоспособности кода, были обнаружены практически во всех классах. 
